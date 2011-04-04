@@ -21,6 +21,9 @@ public class LogCheck {
 	long lastModified = file.lastModified();
 	long currentTime = System.currentTimeMillis();
 
+	System.out.println( "Last modified: " + Long.toString(lastModified));
+	System.out.println( "Current time: " + Long.toString(currentTime));
+	
 	//900000 ms = 15 minutes
 	if( currentTime - lastModified > 300000 ) {
 	    //It's been 15 minutes, something went wrong.
