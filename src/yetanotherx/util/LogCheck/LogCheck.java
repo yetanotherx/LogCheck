@@ -22,7 +22,7 @@ public class LogCheck {
 	long currentTime = System.currentTimeMillis();
 
 	//900000 ms = 15 minutes
-	if( currentTime - lastModified > 900000 ) {
+	if( currentTime - lastModified > 300000 ) {
 	    //It's been 15 minutes, something went wrong.
 	    Runtime.getRuntime().exec("killall java");
 	    Runtime.getRuntime().exec("server/start");
